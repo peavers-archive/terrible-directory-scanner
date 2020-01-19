@@ -30,10 +30,16 @@ ext {
 
 dependencies {
     // Spring
-    
+    implementation 'org.springframework.cloud:spring-cloud-starter-task'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
     // Apache
     implementation 'org.apache.commons:commons-lang3:3.9'
     implementation 'commons-io:commons-io:2.6'
+
+    // Other
+    implementation 'com.beust:jcommander:1.78'
+    implementation 'com.google.guava:guava:28.2-jre'
 
     // Development
     compileOnly 'org.projectlombok:lombok'
