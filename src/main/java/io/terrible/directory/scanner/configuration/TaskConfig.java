@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableTask
 @Configuration
 @RequiredArgsConstructor
-public class TaskConfiguration {
+public class TaskConfig {
 
   private final ScanService scanService;
 
