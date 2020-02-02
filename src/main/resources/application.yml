@@ -1,3 +1,9 @@
 spring:
   application:
     name: terrible-directory-scanner
+
+  cloud:
+    stream:
+      bindings:
+        directoryChannel:
+          destination: terrible-directory-scanner
