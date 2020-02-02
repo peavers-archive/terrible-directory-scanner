@@ -10,15 +10,13 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /** @author Chris Turner (chris@forloop.space) */
 @Data
 @Builder
-@Document(collection = "raw-files")
 @AllArgsConstructor
 @NoArgsConstructor
-public class VideoFile {
+public class MediaFile {
 
   @Id private String id;
 

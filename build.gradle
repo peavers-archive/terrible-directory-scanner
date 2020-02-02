@@ -31,7 +31,6 @@ ext {
 dependencies {
     // Spring
     implementation 'org.springframework.cloud:spring-cloud-starter-task'
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
     // Apache
     implementation 'org.apache.commons:commons-lang3:3.9'

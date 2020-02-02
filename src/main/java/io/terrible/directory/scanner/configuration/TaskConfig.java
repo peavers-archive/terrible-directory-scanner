@@ -27,7 +27,7 @@ public class TaskConfig {
     return args -> {
       JCommander.newBuilder().addObject(this.args).build().parse(args);
 
-      scanService.scanForVideos(this.args.getDirectory());
+      scanService.scanMedia(this.args.getDirectory());
     };
   }
 }
