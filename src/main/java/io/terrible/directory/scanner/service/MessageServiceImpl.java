@@ -17,7 +17,7 @@ public class MessageServiceImpl implements MessageService {
 
   private final MessageChannel channel;
 
-  public MessageServiceImpl(MessageBinding binding) {
+  public MessageServiceImpl(final MessageBinding binding) {
     this.channel = binding.subscription();
   }
 
