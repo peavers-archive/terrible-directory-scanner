@@ -12,7 +12,7 @@ import org.springframework.cloud.task.configuration.DefaultTaskConfigurer;
  */
 public class DataSourceConfig extends DefaultTaskConfigurer {
 
-  public DataSourceConfig(DataSource dataSource) {
+  public DataSourceConfig(final DataSource dataSource) {
     super(dataSource);
   }
 }
