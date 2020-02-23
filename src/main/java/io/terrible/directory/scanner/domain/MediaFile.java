@@ -6,17 +6,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @author Chris Turner (chris@forloop.space)
- */
+/** @author Chris Turner (chris@forloop.space) */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class MediaFile {
 
-    private String absolutePath;
+  private String absolutePath;
 
-    private String mimeType;
-
+  private String mimeType;
 }
