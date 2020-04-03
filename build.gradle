@@ -1,7 +1,7 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.5.RELEASE'
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-    id 'com.diffplug.gradle.spotless' version '3.27.2'
+    id 'com.diffplug.gradle.spotless' version '3.28.1'
     id 'maven-publish'
     id 'java'
 }
@@ -39,12 +39,12 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
 
     // Apache
-    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'org.apache.commons:commons-lang3:3.10'
     implementation 'commons-io:commons-io:2.6'
 
     // Other
     implementation 'com.beust:jcommander:1.78'
-    implementation 'org.postgresql:postgresql:42.2.11'
+    implementation 'org.postgresql:postgresql:42.2.12'
     implementation 'com.google.guava:guava:28.2-jre'
 
     // Development
