@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.sql.Date;
 import java.time.Instant;
 import java.util.Collection;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
 
-/** @author Chris Turner (chris@forloop.space) */
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -48,9 +48,9 @@ public class ScanServiceImpl implements ScanService {
     return MediaFile.builder()
         .name(file.getName())
         .absolutePath(file.getAbsolutePath())
-        .importedTime(Instant.now().toEpochMilli())
-        .lastAccessTime(attributes.lastAccessTime().toInstant().toEpochMilli())
-        .lastModifiedTime(attributes.lastModifiedTime().toInstant().toEpochMilli())
+        .importedTime(Date.from(Instant.now()))
+        .lastAccessTime(Date.from(attributes.lastAccessTime().toInstant()))
+        .lastModifiedTime(Date.from(attributes.lastModifiedTime().toInstant()))
         .size(attributes.size())
         .mimeType(mimeType)
         .build();

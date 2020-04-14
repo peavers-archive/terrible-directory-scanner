@@ -9,7 +9,6 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
 
-/** @author Chris Turner (chris@forloop.space) */
 @Slf4j
 @Service
 @EnableBinding(MessageBinding.class)

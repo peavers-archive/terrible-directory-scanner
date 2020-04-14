@@ -1,12 +1,12 @@
 /* Licensed under Apache-2.0 */
 package io.terrible.directory.scanner.domain;
 
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/** @author Chris Turner (chris@forloop.space) */
 @Data
 @Builder
 @AllArgsConstructor
@@ -21,9 +21,9 @@ public class MediaFile {
 
   private long size;
 
-  private long lastAccessTime;
+  private Date lastAccessTime;
 
-  private long lastModifiedTime;
+  private Date lastModifiedTime;
 
-  private long importedTime;
+  private Date importedTime;
 }
