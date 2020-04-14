@@ -2,13 +2,9 @@
 package io.terrible.directory.scanner.service;
 
 import com.google.common.net.MediaType;
-import io.terrible.directory.scanner.domain.MediaFile;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.attribute.BasicFileAttributes;
-import java.sql.Date;
-import java.time.Instant;
 import java.util.Collection;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,23 +32,8 @@ public class ScanServiceImpl implements ScanService {
       //noinspection UnstableApiUsage
       if (StringUtils.isNoneEmpty(mimeType)
           && MediaType.parse(mimeType).is(MediaType.ANY_VIDEO_TYPE)) {
-        messageService.send(new GenericMessage<>(buildMediaFile(file, mimeType)));
+        messageService.send(new GenericMessage<File>(file));
       }
     }
-  }
-
-  private MediaFile buildMediaFile(final File file, final String mimeType) throws IOException {
-    final BasicFileAttributes attributes =
-        Files.readAttributes(file.toPath(), BasicFileAttributes.class);
-
-    return MediaFile.builder()
-        .name(file.getName())
-        .absolutePath(file.getAbsolutePath())
-        .importedTime(Date.from(Instant.now()))
-        .lastAccessTime(Date.from(attributes.lastAccessTime().toInstant()))
-        .lastModifiedTime(Date.from(attributes.lastModifiedTime().toInstant()))
-        .size(attributes.size())
-        .mimeType(mimeType)
-        .build();
   }
 }

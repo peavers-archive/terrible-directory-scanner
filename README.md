@@ -1,3 +1,3 @@
-# Terrible Template
+# Terrible Directory Scanner
 
-Just a repository template setup with the bits I like.
+Will scan a given directory for media files and send them somewhere via a message queue. 
