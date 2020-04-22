@@ -4,13 +4,12 @@ package io.terrible.directory.scanner.configuration;
 import com.beust.jcommander.JCommander;
 import io.terrible.directory.scanner.Application;
 import io.terrible.directory.scanner.service.ScanService;
+import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
 
 @Slf4j
 @Configuration

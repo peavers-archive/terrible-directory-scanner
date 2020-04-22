@@ -2,13 +2,12 @@
 package io.terrible.directory.scanner.service;
 
 import io.terrible.directory.scanner.binding.MessageBinding;
+import java.io.File;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
-
-import java.io.File;
 
 @Slf4j
 @Service
