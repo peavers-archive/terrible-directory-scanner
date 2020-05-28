@@ -40,7 +40,7 @@ dependencies {
 
     // Apache
     implementation 'org.apache.commons:commons-lang3:3.10'
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-io:commons-io:2.7'
 
     // Other
     implementation 'com.beust:jcommander:1.78'
