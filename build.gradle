@@ -45,7 +45,7 @@ dependencies {
     // Other
     implementation 'com.beust:jcommander:1.78'
     implementation 'org.postgresql:postgresql:42.2.18'
-    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'com.google.guava:guava:30.0-jre'
 
     // Development
     compileOnly 'org.projectlombok:lombok'
